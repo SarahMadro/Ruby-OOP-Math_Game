@@ -1,14 +1,12 @@
-require './main'
-require './game'
-require './questions'
 
 class Player
-  attr_reader = :start_lives
-  attr_accessor = :lives, :name
+
+  attr_reader :start_lives
+  attr_accessor :name, :lives
 
   def initialize(name)
-    @lives = lives
-    @name = 3
+    @name = name
+    @lives = 3
     @start_lives = 3
   end
 
@@ -17,7 +15,7 @@ class Player
   end
 
   def score
-    "#{lives}/#{total_lives}"
+    "#{lives}/#{start_lives}"
   end
 end
 
